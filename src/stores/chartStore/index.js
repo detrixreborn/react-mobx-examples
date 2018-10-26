@@ -1,32 +1,16 @@
-import { observable, action, computed } from 'mobx';
-import * as filterTypes from '../../constants/filterTypes';
-import { DURATION_FILTER_FUNCTIONS } from '../../constants/durationFilter';
-import { getTracknameFilter } from '../../constants/nameFilter';
-import { getAndCombined } from '../../services/filter';
+import { observable, action } from 'mobx';
 
 class ChartStore {
 
-    @observable durationFilterType;
-    @observable query;
+    @observable dataSet;
 
     constructor() {
-        this.durationFilterType = filterTypes.ALL;
-        this.query = '';
+        this.dataSet = [];
     }
 
-    @action setFilterDuration = (filterType) => {
-        this.durationFilterType = filterType;
-    }
-
-    @action setFilterQuery = (query) => {
-        this.query = query;
-    }
-
-    @computed get combinedFilters() {
-        return getAndCombined([
-            DURATION_FILTER_FUNCTIONS[this.durationFilterType],
-            getTracknameFilter(this.query)
-        ]);
+    @action addRandomValue = () => {
+        const randomInt = 10 + Math.random() * 100;
+        this.dataSet.push(randomInt);
     }
 
 }
