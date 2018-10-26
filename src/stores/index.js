@@ -9,6 +9,7 @@ import entityStore from './entityStore';
 import userStore from './userStore';
 import paginateStore from './paginateStore';
 import requestStore from './requestStore';
+import chartStore from './chartStore';
 
 export {
   browseStore,
@@ -22,4 +23,5 @@ export {
   userStore,
   paginateStore,
   requestStore,
+  chartStore,
 };

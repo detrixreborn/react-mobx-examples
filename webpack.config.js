@@ -7,13 +7,13 @@ module.exports = {
     './src/index.js'
   ],
   module: {
-    preLoaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "eslint-loader"
-      },
-    ],
+    // preLoaders: [
+    //   {
+    //     test: /\.js$/,
+    //     exclude: /node_modules/,
+    //     loader: "eslint-loader"
+    //   },
+    // ],
     loaders: [{
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,

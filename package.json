@@ -63,6 +63,7 @@
   },
   "dependencies": {
     "classnames": "2.2.5",
+    "d3": "^5.7.0",
     "js-cookie": "2.1.0",
     "lodash": "4.17.10",
     "mobx": "4.2.1",
